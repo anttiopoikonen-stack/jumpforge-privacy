@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data deletion — JumpForge</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f2f6fb;
+        --card: #ffffff;
+        --text: #1f2933;
+        --muted: #52606d;
+        --accent: #1a6b9a;
+        --border: #d9e2ec;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+      }
+
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px 24px;
+        margin-bottom: 24px;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.25;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        margin-top: 1.6rem;
+        font-size: 1.25rem;
+      }
+
+      p,
+      li {
+        color: var(--text);
+      }
+
+      .meta {
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+
+      ul {
+        padding-left: 1.25rem;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      footer {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>Data deletion request — JumpForge</h1>
+        <p class="meta">
+          App: JumpForge · Developer contact:
+          <a href="mailto:antti.o.poikonen@gmail.com">antti.o.poikonen@gmail.com</a>
+          · Last updated: 13 November 2026
+        </p>
+
+        <p>
+          This page explains how to delete data associated with the
+          <strong>JumpForge</strong> Android app (package
+          <code>com.jumpforge.app</code>), as shown on the JumpForge Google Play
+          listing.
+        </p>
+
+        <h2>What JumpForge stores</h2>
+        <p>
+          JumpForge does not operate a JumpForge account system and does not
+          upload your training videos or History to JumpForge servers. Training
+          data stays on your device unless you deliberately export or share it.
+        </p>
+        <ul>
+          <li>
+            <strong>On-device:</strong> recorded/imported videos, pose analysis
+            cache, athlete profiles (name, sex, height), and History session
+            metrics.
+          </li>
+          <li>
+            <strong>Google Play:</strong> if you buy JumpForge Plus, purchase
+            records are handled by Google Play under Google&apos;s terms (not
+            stored on a JumpForge server).
+          </li>
+        </ul>
+
+        <h2>How to delete your data</h2>
+        <p>Do one of the following:</p>
+        <ul>
+          <li>
+            <strong>In the app:</strong> delete individual History sessions
+            and/or athlete profiles you no longer want.
+          </li>
+          <li>
+            <strong>Clear app storage:</strong> on your Android device open
+            Settings → Apps → JumpForge → Storage → Clear storage / Clear data.
+            This removes local videos, History, and athlete profiles stored by
+            JumpForge.
+          </li>
+          <li>
+            <strong>Uninstall JumpForge:</strong> uninstalling removes JumpForge
+            app data from typical Android devices.
+          </li>
+        </ul>
+        <p>
+          You can also email
+          <a href="mailto:antti.o.poikonen@gmail.com?subject=JumpForge%20data%20deletion"
+            >antti.o.poikonen@gmail.com</a
+          >
+          with subject “JumpForge data deletion” if you need help. Because we do
+          not hold your training data on JumpForge servers, deletion is
+          completed on the device using the steps above.
+        </p>
+
+        <h2>What is deleted vs retained</h2>
+        <ul>
+          <li>
+            <strong>Deleted by clear data / uninstall:</strong> local videos
+            under JumpForge storage, local History, athlete profiles, and local
+            Plus entitlement flags on that device.
+          </li>
+          <li>
+            <strong>Not deleted by uninstalling JumpForge alone:</strong> copies
+            you previously exported/shared yourself (email, Files, cloud folders
+            you chose). Delete those where you saved them.
+          </li>
+          <li>
+            <strong>Google Play purchases:</strong> JumpForge Plus payment and
+            purchase history remain with Google according to Google&apos;s
+            retention practices. Manage or review purchases in your Google
+            account / Google Play. JumpForge cannot erase Google&apos;s purchase
+            records.
+          </li>
+        </ul>
+
+        <h2>Retention period</h2>
+        <p>
+          On-device JumpForge data is kept only while it remains on your device —
+          there is no JumpForge cloud retention period. It is removed when you
+          delete it in-app, clear app storage, or uninstall, as described above.
+          Google Play may retain purchase-related records for as long as Google
+          requires for payments, fraud prevention, and legal obligations.
+        </p>
+
+        <h2>Privacy policy</h2>
+        <p>
+          Full policy:
+          <a href="https://anttiopoikonen-stack.github.io/jumpforge-privacy/"
+            >https://anttiopoikonen-stack.github.io/jumpforge-privacy/</a
+          >
+        </p>
+      </section>
+
+      <footer>
+        JumpForge ·
+        <a href="https://github.com/anttiopoikonen-stack/JumpForge">Source code</a>
+      </footer>
+    </main>
+  </body>
+</html>
