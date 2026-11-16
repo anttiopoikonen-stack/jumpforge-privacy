@@ -85,21 +85,23 @@
     <main>
       <section class="card">
         <h1>Privacy Policy</h1>
-        <p class="meta">App: JumpForge · Last updated: 13 November 2026</p>
+        <p class="meta">App: JumpForge · Last updated: 16 November 2026</p>
 
         <h2>Introduction</h2>
         <p>
           This privacy policy applies to the JumpForge mobile app
           (&quot;the app&quot;), which estimates jump and sprint metrics from
-          video on your device. We respect user privacy. This policy clearly
+          video on your device and optionally records outdoor GNSS speed tracks
+          (JumpForge Plus). We respect user privacy. This policy clearly
           explains what data the app processes — and what it does not.
         </p>
 
         <h2>What data the app processes</h2>
         <p>
           <strong
-            >JumpForge analyzes videos on your device. There is no JumpForge
-            server that receives your videos or pose data.</strong
+            >JumpForge analyzes videos and GNSS tracks on your device. There is
+            no JumpForge server that receives your videos, pose data, or
+            location tracks.</strong
           >
           The app has no JumpForge user accounts and no first-party analytics.
         </p>
@@ -107,33 +109,43 @@
         <ul>
           <li>camera clips you record or videos you import (analysis and review)</li>
           <li>pose landmarks derived from video (event detection and skeleton overlay)</li>
+          <li>
+            precise location / GNSS fixes for the optional outdoor
+            <strong>Speed track</strong> protocol (Plus) while you record a track
+          </li>
           <li>athlete profiles (name, sex, height) in a local file</li>
-          <li>saved session metrics (History) in a local file</li>
+          <li>saved session metrics (History) in a local file, including Speed track summaries you save</li>
           <li>JumpForge Plus purchase entitlement via Google Play Billing</li>
         </ul>
         <p>
           If you use History <strong>Export</strong> (Plus), you choose where to
           send the JSON backup (email, Files, etc.). That share is under your
-          control.
+          control and may include Speed track rows you saved.
         </p>
         <p>The app does not include:</p>
         <ul>
           <li>JumpForge user accounts or sign-in</li>
           <li>advertising or ad tracking</li>
           <li>first-party analytics or tracking services</li>
-          <li>upload of videos or analysis results to developer servers</li>
+          <li>background location tracking</li>
+          <li>upload of videos, analysis results, or GNSS tracks to developer servers</li>
         </ul>
 
         <h2>Permissions</h2>
         <ul>
           <li>
             <strong>Camera</strong> — only to record training clips you choose
-            to capture. Not required if you only import videos.
+            to capture. Not required if you only import videos or use Speed track.
+          </li>
+          <li>
+            <strong>Precise location</strong> — only for the optional outdoor
+            Speed track protocol (Plus), in the foreground while you record a
+            track. Not used for advertising.
           </li>
           <li>
             <strong>Internet</strong> — so Google Play Billing can contact
             Google Play for JumpForge Plus. JumpForge does not use the network
-            to upload videos or analysis results.
+            to upload videos, analysis results, or GNSS tracks.
           </li>
           <li>No microphone permission is requested for recording.</li>
         </ul>
@@ -141,8 +153,9 @@
         <h2>Cloud backup</h2>
         <p>
           Android cloud backup of captures, imports, and the local History file
-          is disabled in the app. Your training videos and History are intended
-          to remain on the device unless you deliberately share an export.
+          is disabled in the app. Your training videos, GNSS History rows, and
+          History file are intended to remain on the device unless you
+          deliberately share an export.
         </p>
 
         <h2>JumpForge Plus (in-app purchase)</h2>
