@@ -85,7 +85,10 @@
     <main>
       <section class="card">
         <h1>Privacy Policy</h1>
-        <p class="meta">App: JumpForge · Last updated: 16 November 2026</p>
+        <p class="meta">
+          App: JumpForge (<code>com.jumpforge.app</code>) · Last updated: 17
+          November 2026
+        </p>
 
         <h2>Introduction</h2>
         <p>
@@ -99,34 +102,55 @@
         <h2>What data the app processes</h2>
         <p>
           <strong
-            >JumpForge analyzes videos and GNSS tracks on your device. There is
-            no JumpForge server that receives your videos, pose data, or
-            location tracks.</strong
+            >JumpForge analyzes videos and GNSS tracks on your device. There
+            are no JumpForge accounts and no JumpForge server: we do not receive
+            your videos, pose data, location, athlete profiles, or
+            results.</strong
           >
-          The app has no JumpForge user accounts and no first-party analytics.
+          The app contains no advertising and no analytics.
         </p>
-        <p>Typical on-device processing includes:</p>
-        <ul>
-          <li>camera clips you record or videos you import (analysis and review)</li>
-          <li>pose landmarks derived from video (event detection and skeleton overlay)</li>
-          <li>
-            precise location / GNSS fixes for the optional outdoor
-            <strong>Speed track</strong> protocol (Plus) while you record a track
-          </li>
-          <li>athlete profiles (name, sex, height) in a local file</li>
-          <li>saved session metrics (History) in a local file, including Speed track summaries you save</li>
-          <li>JumpForge Plus purchase entitlement via Google Play Billing</li>
-        </ul>
         <p>
-          If you use History <strong>Export</strong> (Plus), you choose where to
-          send the JSON backup (email, Files, etc.). That share is under your
-          control and may include Speed track rows you saved.
+          Google components built into the app handle purchases and location
+          fixes. See <a href="#google-components">Google components</a> below.
         </p>
+        <p>On-device processing includes:</p>
+        <ul>
+          <li>
+            <strong>Camera clips you record and videos you import</strong>
+            (analysis and review). Imported videos are copied into app storage;
+            your original file is not changed. The clip in app storage is
+            deleted when you leave the results or load another clip.
+          </li>
+          <li>
+            <strong>Pose landmarks derived from video</strong> (event detection
+            and skeleton overlay). Held in memory during analysis and not
+            saved.
+          </li>
+          <li>
+            <strong>Location / GNSS fixes</strong> for the optional outdoor
+            <strong>Speed track</strong> protocol (Plus) while you record a
+            track. Coordinates are used in memory to estimate speed, distance,
+            and acceleration and are not saved. If you save the track, History
+            keeps time, distance, speed, and acceleration values only.
+          </li>
+          <li>
+            <strong>Athlete profiles</strong> (name, sex, height) in a local
+            file.
+          </li>
+          <li>
+            <strong>Saved session metrics (History)</strong> in a local file,
+            including Speed track rows you save.
+          </li>
+          <li>
+            <strong>JumpForge Plus purchase entitlement</strong> via Google Play
+            Billing.
+          </li>
+        </ul>
         <p>The app does not include:</p>
         <ul>
           <li>JumpForge user accounts or sign-in</li>
           <li>advertising or ad tracking</li>
-          <li>first-party analytics or tracking services</li>
+          <li>analytics or tracking services</li>
           <li>background location tracking</li>
           <li>upload of videos, analysis results, or GNSS tracks to developer servers</li>
         </ul>
@@ -138,17 +162,55 @@
             to capture. Not required if you only import videos or use Speed track.
           </li>
           <li>
-            <strong>Precise location</strong> — only for the optional outdoor
-            Speed track protocol (Plus), in the foreground while you record a
-            track. Not used for advertising.
+            <strong>Location (precise and approximate)</strong> — only for the
+            optional outdoor Speed track protocol (Plus). Android offers both
+            options in one prompt; Speed track needs precise location.
+            Requested when you open Speed track and used in the foreground
+            while you record a track. Not used for advertising or background
+            tracking.
           </li>
           <li>
-            <strong>Internet</strong> — so Google Play Billing can contact
-            Google Play for JumpForge Plus. JumpForge does not use the network
-            to upload videos, analysis results, or GNSS tracks.
+            <strong>Internet and network state</strong> — declared for Google
+            Play Billing. JumpForge&apos;s own code makes no network requests
+            and does not upload videos, analysis results, or GNSS tracks.
+          </li>
+          <li>
+            <strong>Other permissions</strong> added by the Google libraries
+            (Play Billing, wake lock) do not give access to personal data.
           </li>
           <li>No microphone permission is requested for recording.</li>
         </ul>
+
+        <h2 id="google-components">Google components</h2>
+        <ul>
+          <li>
+            <strong>Google Play Billing</strong> — handles the optional
+            JumpForge Plus purchase. See &quot;JumpForge Plus&quot; below.
+          </li>
+          <li>
+            <strong>Google Play services location</strong> — Speed track gets
+            location fixes from Android&apos;s fused location provider, which
+            is part of Google Play services on your device. Before a track,
+            Android may show a system dialog asking you to turn on device
+            location or location accuracy. Those settings, and any location
+            data Google collects through them, are controlled by you in Android
+            settings and governed by Google&apos;s privacy policy. JumpForge
+            does not receive that data.
+          </li>
+          <li>
+            <strong>MediaPipe (pose analysis)</strong> — pose detection runs on
+            your device with Google&apos;s MediaPipe library. Videos, images,
+            and pose landmarks are not sent to Google. The usage-diagnostics
+            reporting built into the Google libraries is switched off in
+            JumpForge.
+          </li>
+        </ul>
+        <p>
+          Google&apos;s privacy policy:
+          <a href="https://policies.google.com/privacy"
+            >https://policies.google.com/privacy</a
+          >
+        </p>
 
         <h2>Cloud backup</h2>
         <p>
@@ -166,6 +228,17 @@
           Billing on the device; we do not receive your payment card details.
         </p>
 
+        <h2>Sharing</h2>
+        <p>
+          JumpForge does not sell personal data and does not send it to us or
+          to advertisers. If you use History <strong>Export</strong> (Plus),
+          you choose where to send the JSON backup (email, Files, etc.). That
+          share is under your control. The file contains athlete profiles and
+          saved History rows, including Speed track rows you saved. A copy of
+          each exported file stays in the app&apos;s cache until you clear app
+          storage or cache, or uninstall.
+        </p>
+
         <h2>Children&apos;s privacy</h2>
         <p>
           JumpForge is a general sports training tool. It is not directed at
@@ -175,9 +248,12 @@
 
         <h2>Data retention and deletion</h2>
         <p>
-          Data stays on your device until you delete sessions/athletes in the
-          app, clear app storage, or uninstall. Uninstalling removes local app
-          data on typical Android devices.
+          Videos are deleted when you leave the results or load another clip.
+          If the app is closed in the middle of an analysis, a clip can remain
+          in app storage until you clear app storage or uninstall. Athlete
+          profiles and History stay on your device until you delete
+          sessions/athletes in the app, clear app storage, or uninstall.
+          Uninstalling removes local app data on typical Android devices.
         </p>
 
         <h2>Changes to this policy</h2>
@@ -203,7 +279,9 @@
 
       <footer>
         JumpForge ·
-        <a href="https://github.com/anttiopoikonen-stack/JumpForge">Source code</a>
+        <a href="terms.html">Terms of Use</a>
+        ·
+        <a href="data-deletion.html">Data deletion</a>
       </footer>
     </main>
   </body>
